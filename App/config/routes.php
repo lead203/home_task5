@@ -1,19 +1,19 @@
 <?php
 
 	return [
-		'' => [
+		'clients/kapkancpa_35/14' => [
 			'controller' => 'main',
 			'action' => 'index',
 		],
 
-		'products' => [
+		'clients/kapkancpa_35/14/products' => [
 			'controller' => 'product',
-			'action' => 'pullAll',
+			'action' => 'catalog',
 		],
 
-		'product' => [
+		'clients/kapkancpa_35/14/product' => [
 			'controller' => 'product',
-			'action' => 'pull',
+			'action' => 'product',
 		]
 
 	];

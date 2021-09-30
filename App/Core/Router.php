@@ -2,6 +2,8 @@
 	
 	namespace App\Core;
 
+	use App\Core\View;
+
 	class Router {
 
 		protected $routes = [];
@@ -42,10 +44,14 @@
 					if (method_exists($path, $action)) {
 						$controller = new $path($this->params);
 						$controller->$action();
-					} 
+					} else {
+						View::errorCode(404);
+					}
 				} else {
-					echo "Not found: $path";
+					View::errorCode(404);
 				}
-			} 
+			} else {
+				View::errorCode(404);
+			}
 		}
 	}
